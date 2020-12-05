@@ -1011,23 +1011,23 @@ fn main() {
     for i in 0..chars.len() {
       let c = chars[i];
       if state == 0 {
-	if c == '-' {
-	  state = 1;
-	  continue;
-	}
-	min.push(c);
+        if c == '-' {
+          state = 1;
+          continue;
+        }
+        min.push(c);
       } else if state == 1 {
-	if c == ' ' {
-	  state = 2;
-	  continue;
-	}
-	max.push(c);
+        if c == ' ' {
+          state = 2;
+          continue;
+        }
+        max.push(c);
       } else if state == 2 {
-	letter = c;
-	state = 3;
-	// Jump us into password meat
-	passwordIndex = i + 3;
-	break;
+        letter = c;
+        state = 3;
+        // Jump us into password meat
+        passwordIndex = i + 3;
+        break;
       }
     }
 
@@ -1047,7 +1047,7 @@ fn main() {
 
     // for i in passwordIndex..chars.len() {
     //   if chars[i] == letter {
-    // 	count += 1;
+    //         count += 1;
     //   }
     // }
 
